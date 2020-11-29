@@ -1,0 +1,281 @@
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+        <!-- Main -->
+        <Constraint
+            android:id="@id/contentMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent">
+
+            <CustomAttribute
+                motion:attributeName="BackgroundColor"
+                motion:customColorValue="@color/blue_sky_color"/>
+
+        </Constraint>
+
+        <!-- Car -->
+        <Constraint
+            android:id="@id/iv_car"
+            android:layout_width="@dimen/size_car"
+            android:layout_height="@dimen/size_car"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"/>
+
+        <!-- Start left -->
+        <Constraint
+            android:id="@id/iv_star_left"
+            android:layout_width="@dimen/start_size"
+            android:layout_height="@dimen/start_size"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/sky_margin_top"
+            android:layout_marginTop="@dimen/sky_margin_top"
+            android:visibility="gone"/>
+
+        <!-- Start right -->
+        <Constraint
+            android:id="@id/iv_star_right"
+            android:layout_width="@dimen/start_size"
+            android:layout_height="@dimen/start_size"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="@dimen/sky_margin_top"
+            android:layout_marginTop="@dimen/sky_margin_top"
+            android:visibility="gone"/>
+
+        <!-- Moon -->
+        <Constraint
+            android:id="@id/iv_moon"
+            android:layout_width="@dimen/img_size"
+            android:layout_height="@dimen/img_size"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintBottom_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent">
+
+            <Transform
+                android:scaleX="0.2"
+                android:scaleY="0.2"/>
+
+        </Constraint>
+
+        <!-- Sun -->
+        <Constraint
+            android:id="@id/iv_sun"
+            android:layout_width="@dimen/img_size"
+            android:layout_height="@dimen/img_size"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent">
+
+            <Transform
+                android:scaleX="1.0"
+                android:scaleY="1.0"/>
+
+        </Constraint>
+
+        <!-- Sky left -->
+        <Constraint
+            android:id="@id/iv_sky_left"
+            android:layout_width="@dimen/img_size"
+            android:layout_height="@dimen/img_size"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="@dimen/sky_margin_top"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:visibility="visible"
+            android:layout_marginLeft="@dimen/margin_default"/>
+
+        <!-- Sky Right -->
+        <Constraint
+            android:id="@id/iv_sky_right"
+            android:layout_width="@dimen/img_size"
+            android:layout_height="@dimen/img_size"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="@dimen/sky_margin_top"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:visibility="visible"
+            android:layout_marginEnd="@dimen/margin_default"/>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <!-- Main -->
+        <Constraint
+            android:id="@id/contentMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent">
+
+            <CustomAttribute
+                motion:attributeName="BackgroundColor"
+                motion:customColorValue="@color/night_color" />
+
+        </Constraint>
+
+        <!-- Car -->
+        <Constraint
+            android:id="@id/iv_car"
+            android:layout_width="@dimen/size_car"
+            android:layout_height="@dimen/size_car"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Start left -->
+        <Constraint
+            android:id="@id/iv_star_left"
+            android:layout_width="@dimen/start_size"
+            android:layout_height="@dimen/start_size"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/sky_margin_top"
+            android:layout_marginTop="@dimen/sky_margin_top"
+            android:visibility="visible"/>
+
+        <!-- Start left -->
+        <Constraint
+            android:id="@id/iv_star_right"
+            android:layout_width="@dimen/start_size"
+            android:layout_height="@dimen/start_size"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="@dimen/sky_margin_top"
+            android:layout_marginTop="@dimen/sky_margin_top"
+            android:visibility="visible"/>
+
+        <!-- Moon -->
+        <Constraint
+            android:id="@id/iv_moon"
+            android:layout_width="@dimen/img_size"
+            android:layout_height="@dimen/img_size"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/margin_default"
+            motion:layout_constraintStart_toStartOf="parent" >
+
+            <Transform
+                android:scaleY="1.0"/>
+        </Constraint>
+
+        <!-- Sun -->
+        <Constraint
+            android:id="@id/iv_sun"
+            android:layout_width="@dimen/img_size"
+            android:layout_height="@dimen/img_size"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent">
+
+            <Transform
+                android:scaleX="0.2"
+                android:scaleY="0.2"/>
+
+        </Constraint>
+
+        <!-- Sky left -->
+        <Constraint
+            android:id="@id/iv_sky_left"
+            android:layout_width="@dimen/img_size"
+            android:layout_height="@dimen/img_size"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="@dimen/sky_margin_top"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:visibility="invisible"
+            android:layout_marginLeft="@dimen/margin_default"/>
+
+        <!-- Sky Right -->
+        <Constraint
+            android:id="@id/iv_sky_right"
+            android:layout_width="@dimen/img_size"
+            android:layout_height="@dimen/img_size"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="@dimen/sky_margin_top"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:visibility="invisible"
+            android:layout_marginEnd="@dimen/margin_default"/>
+
+    </ConstraintSet>
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@+id/start"
+        motion:duration="1000"
+        motion:motionInterpolator="linear">
+
+        <KeyFrameSet>
+
+            <!-- Position to Sky left -->
+            <KeyPosition
+                motion:motionTarget="@id/iv_sky_left"
+                motion:keyPositionType="parentRelative"
+                motion:framePosition="0"
+                motion:percentX="0"/>
+
+            <KeyPosition
+                motion:motionTarget="@id/iv_sky_left"
+                motion:keyPositionType="parentRelative"
+                motion:framePosition="50"
+                motion:percentX="0"/>
+
+            <KeyPosition
+                motion:motionTarget="@id/iv_sky_left"
+                motion:keyPositionType="parentRelative"
+                motion:framePosition="99"
+                motion:percentX="-0.5"/>
+
+            <KeyPosition
+                motion:motionTarget="@id/iv_sky_left"
+                motion:keyPositionType="parentRelative"
+                motion:framePosition="100"
+                motion:percentX="-0.5"/>
+
+            <!-- Position to Sun -->
+            <KeyPosition
+                motion:motionTarget="@id/iv_sun"
+                motion:keyPositionType="pathRelative"
+                motion:framePosition="25"
+                motion:percentY="-.10"/>
+
+            <KeyAttribute
+                motion:motionTarget="@id/iv_moon"
+                motion:framePosition="0">
+                <CustomAttribute
+                    motion:attributeName="colorFilter"
+                    motion:customColorValue="@color/white" />
+            </KeyAttribute>
+
+            <KeyAttribute
+                motion:motionTarget="@id/iv_moon"
+                motion:framePosition="50">
+                <CustomAttribute
+                    motion:attributeName="colorFilter"
+                    motion:customColorValue="@color/white" />
+            </KeyAttribute>
+
+            <KeyAttribute
+                motion:motionTarget="@id/iv_moon"
+                motion:framePosition="100">
+                <CustomAttribute
+                    motion:attributeName="colorFilter"
+                    motion:customColorValue="@color/sun_hide_color" />
+            </KeyAttribute>
+
+        </KeyFrameSet>
+
+        <OnSwipe
+            motion:dragDirection="dragRight"
+            motion:touchAnchorId="@id/iv_car"
+            motion:touchAnchorSide="right" />
+
+    </Transition>
+</MotionScene>
